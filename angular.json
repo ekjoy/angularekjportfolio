@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-universal-course": {
+    "ekj-portfolio-web": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-universal-course/browser",
+            "outputPath": "dist/ekj-portfolio-web/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-universal-course:build"
+            "browserTarget": "ekj-portfolio-web:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-universal-course:build:production"
+              "browserTarget": "ekj-portfolio-web:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-universal-course:build"
+            "browserTarget": "ekj-portfolio-web:build"
           }
         },
         "test": {
@@ -106,18 +106,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-universal-course:serve"
+            "devServerTarget": "ekj-portfolio-web:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-universal-course:serve:production"
+              "devServerTarget": "ekj-portfolio-web:serve:production"
             }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/angular-universal-course/server",
+            "outputPath": "dist/ekj-portfolio-web/server",
             "main": "server.ts",
             "tsConfig": "tsconfig.server.json",
             "sourceMap": true,
@@ -140,21 +140,21 @@
         "serve-ssr": {
           "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "browserTarget": "angular-universal-course:build",
-            "serverTarget": "angular-universal-course:server"
+            "browserTarget": "ekj-portfolio-web:build",
+            "serverTarget": "ekj-portfolio-web:server"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-universal-course:build:production",
-              "serverTarget": "angular-universal-course:server:production"
+              "browserTarget": "ekj-portfolio-web:build:production",
+              "serverTarget": "ekj-portfolio-web:server:production"
             }
           }
         },
         "prerender": {
           "builder": "@nguniversal/builders:prerender",
           "options": {
-            "browserTarget": "angular-universal-course:build:production",
-            "serverTarget": "angular-universal-course:server:production",
+            "browserTarget": "ekj-portfolio-web:build:production",
+            "serverTarget": "ekj-portfolio-web:server:production",
             "routes": [
               "/"
             ]
