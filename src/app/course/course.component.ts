@@ -21,6 +21,7 @@ import {
 import { merge, fromEvent } from 'rxjs';
 import { Lesson } from '../model/lesson';
 import { Meta, Title } from '@angular/platform-browser';
+import { IBlogTopicContent } from '../model/IBlogTopicContent';
 
 @Component({
   selector: 'course',
@@ -28,7 +29,8 @@ import { Meta, Title } from '@angular/platform-browser';
   styleUrls: ['./course.component.scss'],
 })
 export class CourseComponent implements OnInit {
-  course: Course;
+  //course: Course;
+  course: IBlogTopicContent;
 
   dataSource: MatTableDataSource<Lesson>;
 
@@ -42,22 +44,23 @@ export class CourseComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    // this.course = this.route.snapshot.data['course'];
     this.course = this.route.snapshot.data['course'];
 
     this.dataSource = new MatTableDataSource([]);
 
-    this.coursesService
-      .findAllCourseLessons(this.course.id)
-      .subscribe((lessons) => (this.dataSource.data = lessons));
+    // this.coursesService
+    //   .findAllCourseLessons(this.course.id)
+    //   .subscribe((lessons) => (this.dataSource.data = lessons));
 
     this.title.setTitle(this.course.description);
 
     this.meta.updateTag({
       name: 'description',
-      content: this.course.longDescription,
+      content: this.course.description,
     });
 
-    this.meta.updateTag({ name: 'og:image', content: this.course.iconUrl });
+    this.meta.updateTag({ name: 'og:image', content: this.course.image });
     this.meta.updateTag({
       name: 'og:description',
       content: this.course.description,

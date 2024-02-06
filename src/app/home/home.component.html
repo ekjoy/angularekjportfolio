@@ -11,6 +11,14 @@
             </courses-card-list>
 
         </mat-tab>
+        <mat-tab label="All Courses Available">
+
+          <courses-card-list
+                  [courses]="courses$ | async">
+
+          </courses-card-list>
+
+      </mat-tab>
 
     </mat-tab-group>
 
