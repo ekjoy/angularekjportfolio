@@ -57,14 +57,14 @@ export class CourseComponent implements OnInit {
 
     this.meta.updateTag({
       name: 'description',
-      content: this.course.description,
+      content: this.course.title,
     });
 
     this.meta.updateTag({ name: 'og:image', content: this.course.image });
     this.meta.updateTag({
       name: 'og:description',
-      content: this.course.description,
+      content: this.course.title,
     });
-    this.meta.updateTag({ name: 'og:title', content: this.course.description });
+    this.meta.updateTag({ name: 'og:title', content: this.course.title });
   }
 }

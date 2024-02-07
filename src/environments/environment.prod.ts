@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  SoftigenCoreApiLink: 'http://coreapi.eldhosekjoy.com/',
-  SoftigenApiImageLink: 'http://coreapi.eldhosekjoy.com/images/',
+  SoftigenCoreApiLink: 'http://restapi.eldhosekjoy.com/',
+  SoftigenApiImageLink: 'http://restapi.eldhosekjoy.com/images/',
 };
