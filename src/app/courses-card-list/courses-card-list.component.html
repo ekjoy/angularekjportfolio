@@ -1,5 +1,24 @@
 
-<mat-card *ngFor="let course of courses" class="course-card mat-elevation-z10">
+<div class="row">
+  <div class="col-lg-4 mb-3 d-flex align-items-stretch"  *ngFor="let topic of courses">
+    <div class="card">
+      <h3 class="card-title">{{topic.title}}</h3>
+      <img class="card-img-top" src="{{topic.image}}" style="width: 100%;"/>
+      <div class="card-body d-flex flex-column">
+
+        <p class="card-text">{{topic.description}}</p>
+      </div>
+      <div class="card-footer">
+        <small class="mycustomfooter">Last updated {{topic.modifiedDate}}</small>
+        <a [routerLink]="['/courses',topic.id]">
+        <button type="button"  class="btn btn-primary float-end" aria-label="Close">
+         Read more >>
+       </button>
+      </a>
+      </div>
+    </div>
+  </div>
+<!-- <mat-card  class="course-card mat-elevation-z10">
 
   <mat-card-header>
 
@@ -19,11 +38,13 @@
       VIEW COURSE
     </button>
 
-    <!-- <button mat-raised-button color="accent"
+     <button mat-raised-button color="accent"
             (click)="editCourse(course)">
       EDIT
-    </button> -->
+    </button>
 
   </mat-card-actions>
 
-</mat-card>
+</mat-card> -->
+
+</div>

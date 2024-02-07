@@ -1,11 +1,4 @@
 
->>> body {
-  margin: 0;
-}
-
-main {
-  margin: 30px;
-}
 
 .spinner-container {
   height: 360px;
@@ -18,3 +11,7 @@ main {
   color: white;
 }
 
+.toolbar-position-fixed {
+  position: fixed;
+  z-index: 1000;
+}

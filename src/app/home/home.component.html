@@ -1,9 +1,12 @@
 
-<div class="courses-panel">
+<div class="container" style="margin-top: 70px;">
+<courses-card-list
+[courses]="courses$ | async">
 
-    <mat-tab-group>
+</courses-card-list>
+    <!-- <mat-tab-group>
 
-        <mat-tab label="All Courses Available">
+        <mat-tab label="Most Recent posts">
 
             <courses-card-list
                     [courses]="courses$ | async">
@@ -11,7 +14,7 @@
             </courses-card-list>
 
         </mat-tab>
-        <mat-tab label="All Courses Available">
+        <mat-tab label="Featured Posts">
 
           <courses-card-list
                   [courses]="courses$ | async">
@@ -20,7 +23,7 @@
 
       </mat-tab>
 
-    </mat-tab-group>
+    </mat-tab-group> -->
 
-</div>
+  </div>
 
