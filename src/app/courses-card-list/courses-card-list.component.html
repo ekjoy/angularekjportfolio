@@ -1,63 +1,23 @@
 
 <div class="row">
   <div class="col-lg-4 mb-3 d-flex align-items-stretch"  *ngFor="let topic of courses">
+    <div class="card">
+      <img class="card-img-top" src="{{topic.image}}" style="width: 100%;"/>
 
-    <div class="blog-card">
-      <div class="meta">
-        <div class="photo" style="background-image: url({{topic.image}})"></div>
-        <ul class="details">
-          <li class="author"><a href="#">Eldhose K Joy</a></li>
-          <li class="date">Aug. 24, 2015</li>
-          <li class="tags">
-            <ul>
-              <li><a href="#">Learn</a></li>
-              <li><a href="#">Code</a></li>
-              <li><a href="#">HTML</a></li>
-              <li><a href="#">CSS</a></li>
-            </ul>
-          </li>
-        </ul>
+      <h3 class="card-title">{{topic.title}}</h3>
+
+      <div class="card-body d-flex flex-column">
+
+        <p class="card-text">{{topic.description}}</p>
       </div>
-      <div class="description">
-        <h1>Angular</h1>
-        <h2>{{topic.title}}</h2>
-        <p>{{topic.description}}</p>
-        <p class="read-more">
-          <a href="#">Read More</a>
-        </p>
+      <div class="card-footer">
+        <small class="mycustomfooter">Author : Eldhose K Joy</small>
+        <a [routerLink]="['/courses/',topic.id]">
+        <button type="button"  class="btn btn-primary float-end" aria-label="Close">
+         Read more >>
+       </button>
+      </a>
       </div>
     </div>
   </div>
-
-
-
-<!-- <mat-card  class="course-card mat-elevation-z10">
-
-  <mat-card-header>
-
-    <mat-card-title>{{course.title}}</mat-card-title>
-
-  </mat-card-header>
-
-  <img mat-card-image [src]="course.image">
-
-  <mat-card-content>
-    <p>{{course.description}}</p>
-  </mat-card-content>
-
-  <mat-card-actions class="course-actions">
-
-    <button mat-raised-button color="primary" [routerLink]="['/courses', course.id]">
-      VIEW COURSE
-    </button>
-
-     <button mat-raised-button color="accent"
-            (click)="editCourse(course)">
-      EDIT
-    </button>
-
-  </mat-card-actions>
-
-</mat-card> -->
-
 </div>
