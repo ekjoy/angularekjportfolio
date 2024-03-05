@@ -33,16 +33,20 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AboutComponent } from './about/about.component';
 import { BlogtopicService } from './services/blogtopic.service';
+import { WebHomeComponent } from './web-home/web-home.component';
+import { WebhomeHeadingComponent } from './webhome-heading/webhome-heading.component';
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     HomeComponent,
     CourseComponent,
     CoursesCardListComponent,
     CourseDialogComponent,
     AboutComponent,
-  ],
+      WebHomeComponent,
+      WebhomeHeadingComponent
+   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,

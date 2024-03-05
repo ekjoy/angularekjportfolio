@@ -1,31 +1,14 @@
 
-
-.description-cell {
-    text-align: left;
-    padding: 10px 0;
+.container
+{
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.card-title {
+  margin-bottom: var(--bs-card-title-spacer-y);
+  color: var(--bs-card-title-color);
+  padding: 5px;
+  font-size: 26px;
+  text-align: center;
 }
 
-.duration-cell {
-    text-align: center;
-}
-
-.duration-cell mat-icon {
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 20px;
-}
-
-.spinner-container {
-    height: 360px;
-    width: 390px;
-    position: fixed;
-}
-
-.lessons-table {
-    min-height: 360px;
-    margin-top: 10px;
-}
-
-.spinner-container mat-spinner {
-    margin: 130px auto 0 auto;
-}

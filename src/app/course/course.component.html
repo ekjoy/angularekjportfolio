@@ -13,16 +13,20 @@
 
     </div>
 </div> -->
+<app-webhome-heading></app-webhome-heading>
 
 <div class="container" style="margin-top: 70px;">
   <div class="cards">
     <div>
       <h2 class="card-title">
        {{course?.title}}
+
       </h2>
     </div>
     <!-- <img class="" src="{{thumpnailurl}}{{blogTopicContent?.imageUrl}}" class="img-responsive card-img-top" alt="eldhosekjoy blog image"> -->
-    <img class="" src="{{course?.image}}" class="img-responsive card-img-top" alt="eldhosekjoy blog image">
+    <div class="cardImage">
+      <img class="" src="{{course?.image}}" class="img-responsive card-img-top" alt="eldhosekjoy blog image">
+    </div>
     <div>
       <div class="card-text">
        <div [innerHTML]="course?.content"></div>
